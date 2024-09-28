@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- css -->
+
+    <!-- js -->
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- js -->
+</head>
+
+<body>
+    <section class="main-frame">
+        <section class="sidebar">
+            <button class="cut-btn""><i class=" fa-solid fa-xmark"></i></button>
+            <div class="sidebar-content">
+                <div class="tallyflow-container">
+                    <a class="tallyflow1" href="index.html">TallyFlow.</a>
+                </div>
+                <img class="frame-child1-line" loading="lazy" alt="image" src="img/vector-7.svg">
+                <ul class="list-unstyled links-gaps">
+                    <li class="sidebar-items ">
+                        <img src="img/dashboard.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="index.html">Dashboard</a>
+                    </li>
+
+                    <li class="sidebar-items">
+                        <img src="img/accounting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="accounting.html">Accounting</a>
+                    </li>
+
+                    <li class="sidebar-items" id="drop">
+                        <img src="img/sales.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links ">
+                            Sales
+                            <i class="fa-solid  fa-chevron-right ml-5 rotate-ar" style="font-size: 10px;"></i>
+                        </a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item  drop-links " href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item  drop-links " href="estimate-qutations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item  drop-links " href="sales-order.html">Sales Order</a>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/gst-return.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="tax-return.html">Tax Return</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/document.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="document.html">Document</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/vector-4.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="reports.html">Reports</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/apply-for-lone.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="apply-for-lone.html">Apply for Loan</a>
+                    </li>
+
+                    <li class="sidebar-items active">
+                        <img src="img/setting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="setting.html">Settings</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/demo.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="demo.html">Demo</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </section>
+        <div class="main-section-21">
+            <!-- header  top-section -->
+            <header class="top-section">
+                <button class="menu"><i class=" fa-solid fa-bars"></i></button>
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="icon">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+
+                <div class="top-right-section">
+                    <div class="add">
+                        <button class="add-btn" onclick="location.href='sales-invoice.html'">
+                            <img src="img/plus.svg" alt="icon">
+                        </button>
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+
+                    </svg>
+                    <div class="tools-icon">
+                        <button class="setting-btn" onclick="location.href='setting.html'">
+                            <img src="img/setting.svg" alt="icon">
+                        </button>
+                        <button class="notification-btn" id="notificationDropdown">
+                            <img src="img/group-401.svg" alt="icon">
+                            <div class="dropdown-menu notificationDrop">
+                                <h3 class="notification-heading pl-3 pt-1">Notification</h3>
+                                <hr class="my-1" style="background-color: #979797; opacity: 0.5;">
+                                <a class="dropdown-item stx" href="setting.html">
+                                    <i class="fa fa-cog"></i>
+                                    <div>
+                                        <span>Settings</span>
+                                        <p>Update Dashboard</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <div>
+                                        <span>Event Update</span>
+                                        <p>An event date update again</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-user"></i>
+                                    <div>
+                                        <span>Profile</span>
+                                        <p>Update your profile</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <div>
+                                        <span>Application Error</span>
+                                        <p>Check running application</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center" href="#">See all notifications</a>
+                            </div>
+                        </button>
+
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+                    </svg>
+                    <div class="profile-section" id="profileDrop">
+                        <div class="profile-name" >
+                            <p>jenny</p>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 14px;"></i>
+                        </div>
+                        <div class="profile">
+                            <img src="img/profile.jpg" alt="profile_image">
+                        </div>
+                        <div class="dropdown-menu profiledropdown" style="display: none;">
+                            <a class="dropdown-item xts" href="setting.html"><i class="fas fa-user-cog mr-2 "></i>Manage
+                                Account</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-key mr-2 "></i>Change
+                                Password</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-list mr-2 "></i>Activity
+                                Log</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-sign-out-alt  mr-2"></i> Log
+                                out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header  top-section -->
+
+            <div class="middle-frame-section p-0 setting-section">
+                <section>
+                    <!-- Tabs navigation -->
+                    <ul class="nav nav-links static justify-content-center bg-white py-1 nav-shadow" id="myTab"
+                        role="tablist" style="box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);">
+                        <li class="nav-item">
+                            <a class="nav-link xzt active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link xzt " id="pricing-tab" data-toggle="tab" href="#pricing" role="tab"
+                                aria-controls="pricing" aria-selected="false">
+                                My plan
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <!-- Home Tab Content -->
+                        <div class="py-2 tab-pane py-0 border-0 fade show active " id="home" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <div>
+                                <div class="progress-container">
+                                    <div class="progress-step active" data-step="0"></div>
+                                    <div class="progress"></div>
+                                    <div class="progress-step" data-step="1"></div>
+                                    <div class="progress"></div>
+                                    <div class="progress-step" data-step="2"></div>
+                                    <div class="progress"></div>
+                                    <div class="progress-step" data-step="3"></div>
+                                </div>
+                                <div class="progress-step-text">
+                                    <span id="progressText">1 of 4</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-body pt-1 pb-3">
+                                <form id="multiStepForm" action="/" method="post">
+                                    <!-- Step 1 -->
+                                    <div class="step px-2 active ">
+                                        <div class="row mx-0 justify-content-between">
+                                            <div class="col-lg-5 col-md-12 col-sm-12 ">
+                                                <h3 class="step-title">Set up your Organization Profile</h3>
+                                                <p class="step-sub-title">Business Details</p>
+                                                <div class="form-group">
+                                                    <label for="panNumber">Your PAN Number</label>
+                                                    <div class="input-container">
+                                                        <input type="text" class="form-control" name="panNumber"
+                                                            id="panNumber" placeholder="Ex.-ABCD1204EF">
+                                                        <span class="input-icon" onclick="showpopup()">
+                                                            <i class="fa-solid fa-paperclip"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="validation">
+                                                        <p class="valid mr-2" data-for="panNumber">Validate</p>
+                                                        <p class="invalidate mr-2" data-for="panNumber"
+                                                            style="display: none;"><i
+                                                                class="fa-solid fa-circle-xmark mr-2"></i>Invalid</p>
+                                                        <p class="verify mr-2" data-for="panNumber"
+                                                            style="display: none;"><i
+                                                                class="fa-solid fa-circle-check mr-2"></i> Verify</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="panNumber">Your GST Number</label>
+                                                    <div class="input-container">
+                                                        <input type="text" class="form-control" id="GstNumber"
+                                                            placeholder="Ex.-22ABCD1204EF56">
+                                                        <span class="input-icon" onclick="showpopup()">
+                                                            <i class="fa-solid fa-paperclip" data-bs-placement="top"
+                                                                data-bs-content="Top popover"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="validation">
+                                                        <p class="valid mr-2" data-for="GstNumber">Validate</p>
+                                                        <p class="invalidate mr-2" data-for="GstNumber"
+                                                            style="display: none;"><i
+                                                                class="fa-solid fa-circle-xmark mr-2"></i>Invalid</p>
+                                                        <p class="verify mr-2" data-for="GstNumber"
+                                                            style="display: none;"><i
+                                                                class="fa-solid fa-circle-check mr-2"></i> Verify</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span style="color: red;">*</span><label for="legalName">Legal
+                                                        Name Of Business</label>
+                                                    <input type="text" class="form-control" id="legalName"
+                                                        name="buinesslegalName" placeholder="Enter Name of Business"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span style="color: red;">*</span><label for="tradeName">Trade
+                                                        Name Of Business</label>
+                                                    <input type="text" class="form-control" id="tradeName"
+                                                        name="buinesstradeName" placeholder="Enter Name of Business"
+                                                        required>
+                                                </div>
+                                                <button type="button" class="small-btn next-step">Next <i
+                                                        class="fa-solid fa-arrow-right"></i></button>
+                                            </div>
+                                            <d iv class="col-lg-6 col-md-12 col-sm-12 pt-5 step-1-img">
+                                                <img src="img/step_1.png" class="img-fluid d-block mx-auto"
+                                                    alt="step-image" style="z-index: 10; position: relative;">
+                                                <svg width="auto" class="img-fluid position-relative"
+                                                    style="top: -50px; left: 0px;" viewBox="0 0 529 92" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <ellipse cx="264.5" cy="46" rx="264.5" ry="46" fill="#EAECF0" />
+                                                </svg>
+                                            </d>
+                                        </div>
+                                    </div>
+                                    <!-- Step 2 -->
+                                    <div class="step">
+                                        <div class="row mx-0 justify-content-between">
+                                            <div class="col-lg-5 col-md-12 col-sm-12">
+                                                <h3 class="step-title">Set up your Organization Profile</h3>
+                                                <p class="step-sub-title">Business Details</p>
+                                                <div class="form-group">
+                                                    <label for="businessConstitution">Constitution of Business
+                                                        (Private Limited)</label>
+                                                    <input type="text" class="form-control" id="businessConstitution"
+                                                        placeholder="Enter Name of Business">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="taxpayerType">Taxpayer Type</label>
+                                                    <input type="text" class="form-control" id="taxpayerType"
+                                                        placeholder="Enter Name of Business">
+                                                </div>
+                                                <div class="d-flex justify-content-end " style="gap: 10px;"> <input
+                                                        type="checkbox" name="Regular" id="Regular">Regular
+                                                    <input type="checkbox" name="Composite" id="Composite">Composite
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="placeOfBusiness">Principal Place Of Business</label>
+                                                    <input type="text" class="form-control" id="placeOfBusiness"
+                                                        name="buisnessPlace" placeholder="Enter Business place">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="stateCode">State Code/State</label>
+                                                    <input type="text" class="form-control" id="stateCode"
+                                                        name="stateCode" placeholder="Enter State Code/State">
+                                                </div>
+                                                <button type="button" class="small-btn next-step">Next <i
+                                                        class="fa-solid  fa-arrow-right"></i></button>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-12 pt-5 step-2-img">
+                                                <img src="img/step_1.png" class="img-fluid d-block mx-auto "
+                                                    alt="step-image" style="z-index: 10; position: relative;">
+                                                <svg width="auto" class="img-fluid position-relative"
+                                                    style="top: -50px; left: 0px;" viewBox="0 0 529 92" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <ellipse cx="264.5" cy="46" rx="264.5" ry="46" fill="#EAECF0" />
+                                                </svg>
+                                                <svg width="150px" class="position-relative"
+                                                    style="top: -350px; left: 20px; z-index: 12;" viewBox="0 0 130 213"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M80 13.0001C-1.16071 -33.598 -54.415 59.5576 98.5776 196.956C110.625 207.772 129.097 211.573 129.097 211.573"
+                                                        stroke="#9095A1" stroke-width="1.19499" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <svg width="200px" class="position-relative"
+                                                    style="top: -300px; left: 0px; z-index: 12;" viewBox="0 0 292 199"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20 4.50018C-47.5604 -31.2824 84.6146 271.331 126.536 180.31C136.059 130.352 101.639 117.728 114.445 137.293C135.027 184.979 332.324 98.9691 283.5 14.9998"
+                                                        stroke="#9095A1" stroke-width="1.19499" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Step 3 -->
+                                    <div class="step">
+                                        <div class="row mx-0 justify-content-between">
+                                            <div class="col-lg-7 col-md-12 col-sm-12 ">
+                                                <h3 class="step-title">Set up your Organization Profile</h3>
+                                                <p class="step-sub-title">Business Details</p>
+                                                <div class="row mx-0 justify-content-between">
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="custom-form-group">
+                                                            <label class="form-label">Software use Tally?</label>
+                                                            <div class="custom-select-menu">
+                                                                <div class="custom-select-btn">
+                                                                    <span class="custom-select-text">Select your
+                                                                        option</span>
+                                                                    <i
+                                                                        class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                </div>
+                                                                <ul class="custom-options">
+                                                                    <li class="custom-option" data-value="Yes">Yes</li>
+                                                                    <li class="custom-option" data-value="No">No</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Tally Backup File</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Chart of Account</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Vendor Master</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Customer Master</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Trial Balance</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Organization Type</label>
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 px-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Turnover (Last FY)</label>
+                                                            <input type="text" name="turnover" id="turnover"
+                                                                class="custom-select-option custom-select-input"
+                                                                placeholder="Rs in Cr">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="small-btn next-step">Next
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="col-lg-5 px-0  col-md-12  col-sm-12 pt-5 step-3-img">
+                                                <img src="img/step_3.png" class="d-block mx-auto" alt="step_3">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4 -->
+                                    <div class="step">
+                                        <div class="row mx-0">
+                                            <div class="col-lg-10 card bg mx-auto">
+                                                <div class="card-header">
+                                                    <h3 class="step-title">Set up your Organization Profile</h3>
+                                                    <p class="step-sub-title">Business Details</p>
+                                                </div>
+                                                <div class="card-body bg-white">
+                                                    <div class="row mx-0 my-3 justify-content-between">
+                                                        <div class="col-md-5 px-0">
+                                                            <label>Do you want us to file GST Return?</label>
+                                                        </div>
+                                                        <div class="col-md-5 px-0">
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mx-0 my-3 justify-content-between">
+                                                        <div class="col-md-5 px-0">
+                                                            <label>Do you want us to file TDS Return?</label>
+                                                        </div>
+                                                        <div class="col-md-5 px-0">
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mx-0 my-3 justify-content-between">
+                                                        <div class="col-md-5 px-0">
+                                                            <label>Do you want us to file any other Return?</label>
+                                                        </div>
+                                                        <div class="col-md-5 px-0">
+                                                            <div class="custom-form-group">
+                                                                <div class="custom-select-menu">
+                                                                    <div class="custom-select-btn">
+                                                                        <span class="custom-select-text">Select your
+                                                                            option</span>
+                                                                        <i
+                                                                            class="fa-solid fa-chevron-down custom-chevron"></i>
+                                                                    </div>
+                                                                    <ul class="custom-options">
+                                                                        <li class="custom-option" data-value="Yes">Yes
+                                                                        </li>
+                                                                        <li class="custom-option" data-value="No">No
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mx-0 form-check ">
+                                                        <input type="checkbox" class="form-check-input" id="termsCheck">
+                                                        <label class="form-check-label text-justify" for="termsCheck">By
+                                                            accessing
+                                                            and
+                                                            using our services, you agree to abide by our terms and
+                                                            conditions...</label>
+                                                    </div>
+                                                    <div class="row mx-0">
+                                                        <button type="submit"
+                                                            class="small-btn next-step  px-3">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- step 4 -->
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- Pricing Tab Content -->
+                        <div class="container-fluid pt-3 pb-3 tab-pane border-0 fade  " id="pricing" role="tabpanel"
+                            aria-labelledby="pricing-tab">
+                            <h2 class="plans-heading">Pick a plan that’s <br>right for you</h2>
+                            <img src="img/underline.svg" class="d-block mx-auto underline" alt="underline">
+                            <div class="price-cart-row">
+
+                                <!-- Basic plan  -->
+                                <div class="price-card bg-white">
+                                    <p class="badge badge-basic px-2">Basic</p>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <div>
+                                        <h2 class="price">₹10000</h2>
+                                        <span class="m-0">Per Year</span>
+                                    </div>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <div class="benifits">
+                                        <p class="benifits-text"><i
+                                                class="fa-solid fa-check benifits-icon"></i>Unlimited Companies</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Data
+                                            Entry Automation</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Manual
+                                            Entry (Tally on Cloud)</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-xmark non-benifits-icon"></i>GST
+                                            Reconciliation </p>
+                                        <p class="benifits-text"><i
+                                                class="fa-solid fa-xmark non-benifits-icon"></i>Reports & Analytics </p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>User
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Document
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Client
+                                            Management</p>
+                                    </div>
+                                    <button class="basic-plans-btn large-btn  btn-block">Start free 14-day
+                                        Trial</button>
+                                    <p class="text-center last-para">No credit card required</p>
+                                </div>
+                                <!-- Basic plan  -->
+
+                                <!-- standard plan -->
+                                <div class="price-card populer">
+                                    <div class="d-flex flex-column">
+                                        <p class="badge populer-badge my-1">Popular</p>
+                                        <p class="badge badge-standerd my-1">Standard</p>
+                                    </div>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <h2 class="price">₹20000</h2>
+                                    <span class="m-0">Per Year</span>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <div class="benifits">
+                                        <p class="benifits-text"><i
+                                                class="fa-solid fa-check benifits-icon"></i>Unlimited Companies</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Data
+                                            Entry Automation</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Manual
+                                            Entry (Tally on
+                                            Cloud)</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>GST
+                                            Reconciliation</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Reports
+                                            & Analytics</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>User
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Document
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Client
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Backlink
+                                            Monitoring</p>
+                                    </div>
+                                    <button class="populer-plan-btn large-btn btn-block">Start free 14-day
+                                        Trial</button>
+                                    <p class="last-para text-white">No credit card required</p>
+                                </div>
+                                <!-- standard plan -->
+
+                                <!-- Premium plan -->
+                                <div class="price-card premium-plan">
+                                    <p class="badge badge-basic px-2">Premiumm</p>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <h2 class="price">₹10000</h2>
+                                    <span class="m-0">Per Year</span>
+                                    <hr class="my-0" style="width: 100%;">
+                                    <div class="benifits">
+                                        <p class="benifits-text"><i
+                                                class="fa-solid fa-check benifits-icon"></i>Unlimited Companies</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Data
+                                            Entry Automation</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Manual
+                                            Entry (Tally on
+                                            Cloud)</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>GST
+                                            Reconciliation</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Reports
+                                            & Analytics</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>User
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Document
+                                            Management</p>
+                                        <p class="benifits-text"><i class="fa-solid fa-check benifits-icon"></i>Client
+                                            Management</p>
+                                    </div>
+                                    <button class="btn-block large-btn premium-plan-btn">Start free 14-day
+                                        Trial</button>
+                                    <p class="text-center last-para">No credit card required</p>
+                                </div>
+                                <!-- Premium plan -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

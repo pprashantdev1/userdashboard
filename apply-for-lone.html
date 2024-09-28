@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- css -->
+
+    <!-- js -->
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- js -->
+</head>
+
+<body>
+    <section class="main-frame">
+        <section class="sidebar">
+            <button class="cut-btn""><i class=" fa-solid fa-xmark"></i></button>
+            <div class="sidebar-content">
+                <div class="tallyflow-container">
+                    <a class="tallyflow1" href="index.html">TallyFlow.</a>
+                </div>
+                <img class="frame-child1-line" loading="lazy" alt="image" src="img/vector-7.svg">
+                <ul class="list-unstyled links-gaps">
+                    <li class="sidebar-items ">
+                        <img src="img/dashboard.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="index.html">Dashboard</a>
+                    </li>
+
+                    <li class="sidebar-items">
+                        <img src="img/accounting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="accounting.html">Accounting</a>
+                    </li>
+
+                    <li class="sidebar-items" id="drop">
+                        <img src="img/sales.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links ">
+                            Sales
+                            <i class="fa-solid  fa-chevron-right ml-5 rotate-ar" style="font-size: 10px;"></i>
+                        </a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item  drop-links " href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item  drop-links " href="estimate-qutations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item  drop-links " href="sales-order.html">Sales Order</a>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/gst-return.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="tax-return.html">Tax Return</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/document.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="document.html">Document</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/vector-4.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="reports.html">Reports</a>
+                    </li>
+
+                    <li class="sidebar-items active">
+                        <img src="img/apply-for-lone.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="apply-for-lone.html">Apply for Loan</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/setting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="setting.html">Settings</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/demo.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="demo.html">Demo</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </section>
+        <div class="main-section-21">
+            <!-- header  top-section -->
+            <header class="top-section">
+                <button class="menu"><i class=" fa-solid fa-bars"></i></button>
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="icon">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+
+                <div class="top-right-section">
+                    <div class="add">
+                        <button class="add-btn"  onclick="location.href='sales-invoice.html'">
+                            <img src="img/plus.svg" alt="icon">
+                        </button>
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+
+                    </svg>
+                    <div class="tools-icon">
+                        <button class="setting-btn" onclick="location.href='setting.html'">
+                            <img src="img/setting.svg" alt="icon">
+                        </button>
+                        <button class="notification-btn" id="notificationDropdown">
+                            <img src="img/group-401.svg" alt="icon">
+                            <div class="dropdown-menu notificationDrop">
+                                <h3 class="notification-heading pl-3 pt-1">Notification</h3>
+                                <hr class="my-1" style="background-color: #979797; opacity: 0.5;">
+                                <a class="dropdown-item stx" href="setting.html">
+                                    <i class="fa fa-cog"></i>
+                                    <div>
+                                        <span>Settings</span>
+                                        <p>Update Dashboard</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <div>
+                                        <span>Event Update</span>
+                                        <p>An event date update again</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-user"></i>
+                                    <div>
+                                        <span>Profile</span>
+                                        <p>Update your profile</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <div>
+                                        <span>Application Error</span>
+                                        <p>Check running application</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center" href="#">See all notifications</a>
+                            </div>
+                        </button>
+
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+                    </svg>
+                    <div class="profile-section" id="profileDrop">
+                        <div class="profile-name" >
+                            <p>jenny</p>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 14px;"></i>
+                        </div>
+                        <div class="profile">
+                            <img src="img/profile.jpg" alt="profile_image">
+                        </div>
+                        <div class="dropdown-menu profiledropdown" style="display: none;">
+                            <a class="dropdown-item xts" href="setting.html"><i class="fas fa-user-cog mr-2 "></i>Manage
+                                Account</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-key mr-2 "></i>Change
+                                Password</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-list mr-2 "></i>Activity
+                                Log</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-sign-out-alt  mr-2"></i> Log
+                                out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header  top-section -->
+
+            <div class="middle-frame-section ">
+                <div id="lone-content">
+                    <div class="flex-frame-child">
+                        <div>
+                            <h2 class="title-md  text-justify">Business Loan</h2>
+                            <p class="para-md  text-justify">A document repository is a secure, centralized digital storage system 
+                                that organizes, manages, and enables efficient retrieval, sharing, and collaboration of files using metadata, indexing, version control, audit trails, and permission settings.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="lone-options">
+                        <div class="lone-option-child">
+                            <img src="img/dollor.svg" alt="icons" class="lones-icons">
+                            <div>
+                                <h5>Unsecured loans up to ₹10lac</h5>
+                                <p>Get a business loan up to ₹10L without any collateral, starting at annual rate of
+                                    11.75%.</p>
+                            </div>
+                        </div>
+                        <div class="lone-option-child">
+                            <img src="img/mobile.svg" alt="icons" class="lones-icons">
+                            <div>
+                                <h5>Fully Digital Process</h5>
+                                <p>The entire process is digital and takes up to 10 minutes to complete. No paperwork is
+                                    required.</p>
+                            </div>
+                        </div>
+                        <div class="lone-option-child">
+                            <img src="img/e-light.svg" alt="icons" class="lones-icons">
+                            <div>
+                                <h5>Fast Disbursal</h5>
+                                <p>Get the loan disbursed within 48 hours post approval, directly in the bank account.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-5">
+                        <button class="large-btn apply-for-lone" onclick="showpopup()">Apply for lone</button>
+                    </div>
+                </div>
+                <div class="get-otp-lone" id="get-otp-lone" style="display: none;">
+                    <h2>Log In</h2>
+                    <p>India</p>
+                    <form action="" class="get-otp-form">
+                        <div class="form-group">
+                            <span>+91</span>
+                            <input type="text" name="number" id="number" class="otp-inputs"
+                                placeholder=" Enter Mobile Number">
+                        </div>
+                        <button class="get-otp-btn" type="submit">Get OTP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

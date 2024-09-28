@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- css -->
+
+    <!-- js -->
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- js -->
+</head>
+
+<body>
+    <section class="main-frame">
+        <section class="sidebar">
+            <button class="cut-btn""><i class=" fa-solid fa-xmark"></i></button>
+            <div class="sidebar-content">
+                <div class="tallyflow-container">
+                    <a class="tallyflow1" href="index.html">TallyFlow.</a>
+                </div>
+                <img class="frame-child1-line" loading="lazy" alt="image" src="img/vector-7.svg">
+                <ul class="list-unstyled links-gaps">
+                    <li class="sidebar-items ">
+                        <img src="img/dashboard.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="index.html">Dashboard</a>
+                    </li>
+
+                    <li class="sidebar-items">
+                        <img src="img/accounting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="accounting.html">Accounting</a>
+                    </li>
+
+                    <li class="sidebar-items active" id="drop">
+                        <img src="img/sales.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links ">
+                            Sales
+                            <i class="fa-solid  fa-chevron-right ml-5 rotate-ar" style="font-size: 10px;"></i>
+                        </a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item  drop-links active" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item  drop-links " href="estimate-qutations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item  drop-links " href="sales-order.html">Sales Order</a>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/gst-return.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="tax-return.html">Tax Return</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/document.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="document.html">Document</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/vector-4.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="reports.html">Reports</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/apply-for-lone.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="apply-for-lone.html">Apply for Loan</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/setting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="setting.html">Settings</a>
+                    </li>
+
+                    <li class="sidebar-items ">
+                        <img src="img/demo.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="demo.html">Demo</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </section>
+        <div class="main-section-21">
+            <!-- header  top-section -->
+            <header class="top-section">
+                <button class="menu"><i class=" fa-solid fa-bars"></i></button>
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="icon">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+
+                <div class="top-right-section">
+                    <div class="add">
+                        <button class="add-btn"  onclick="location.href='sales-invoice.html'">
+                            <img src="img/plus.svg" alt="icon">
+                        </button>
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+
+                    </svg>
+                    <div class="tools-icon">
+                        <button class="setting-btn" onclick="location.href='setting.html'">
+                            <img src="img/setting.svg" alt="icon">
+                        </button>
+                        <button class="notification-btn" id="notificationDropdown">
+                            <img src="img/group-401.svg" alt="icon">
+                            <div class="dropdown-menu notificationDrop">
+                                <h3 class="notification-heading pl-3 pt-1">Notification</h3>
+                                <hr class="my-1" style="background-color: #979797; opacity: 0.5;">
+                                <a class="dropdown-item stx" href="setting.html">
+                                    <i class="fa fa-cog"></i>
+                                    <div>
+                                        <span>Settings</span>
+                                        <p>Update Dashboard</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <div>
+                                        <span>Event Update</span>
+                                        <p>An event date update again</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-user"></i>
+                                    <div>
+                                        <span>Profile</span>
+                                        <p>Update your profile</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <div>
+                                        <span>Application Error</span>
+                                        <p>Check running application</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center" href="#">See all notifications</a>
+                            </div>
+                        </button>
+
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+                    </svg>
+                    <div class="profile-section" id="profileDrop">
+                        <div class="profile-name" >
+                            <p>jenny</p>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 14px;"></i>
+                        </div>
+                        <div class="profile">
+                            <img src="img/profile.jpg" alt="profile_image">
+                        </div>
+                        <div class="dropdown-menu profiledropdown" style="display: none;">
+                            <a class="dropdown-item xts" href="setting.html"><i class="fas fa-user-cog mr-2 "></i>Manage
+                                Account</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-key mr-2 "></i>Change
+                                Password</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-list mr-2 "></i>Activity
+                                Log</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-sign-out-alt  mr-2"></i> Log
+                                out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header  top-section -->
+
+            <div class="middle-frame-section p-0">
+                <div class="invoice-section" id="invoice-section">
+                    <div class="image-frame-section">
+                        <img src="img/sales_invoice.png" class="img-fluid" alt="upload_document">
+                        <div class="image-child-frame-section">
+                            <h3 class="title-lg">Create your Invoice </h3>
+                            <p class="para-lg">"Generate your digital invoice quickly and efficiently with our
+                                easy-to-use
+                                platform."
+                            </p>
+                            <button class="large-btn" id="invoice-btn">Create Your Invoice</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="invoice-generate" style="display: none;">
+                    <div class="bread-crumb-header">
+                        <div>
+                            <span><a class="inactive-breadcrumb" href="sales-invoice.html">Sales Invoice &gt; </a>
+                                <a class="active-bread-crumb">Create your Invoice</a></span>
+                        </div>
+                        <div class="child-icon">
+                            <a>
+                                <img src="img/vector-1.svg" class="icons" alt="icons">
+                                <p>Print</p>
+                            </a>
+                            <a>
+                                <img src="img/save.svg" class="icons" alt="icons">
+                                <p>save</p>
+                            </a>
+                            <a>
+                                <img src="img/shre.svg" class="icons" alt="icons">
+                                <p>Share</p>
+                            </a>
+                            <a>
+                                <i class="fa-solid fa-share fa-icon fa-x" id="back-invoice"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="invoice-frame">
+
+
+                        <form action="" method="post" class="sales-invoice-form">
+                            <div class="invoice-t-p">
+                                <div class="switch-container d-flex " style="gap: 10px;">
+                                    <label for="paymentSwitch" id="creditLabel">Credit</label>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="paymentSwitch">
+                                        <label class="custom-control-label" for="paymentSwitch"
+                                            id="paymentLabel"></label>
+                                    </div>
+                                    <label for="paymentSwitch" id="cashLabel">Cash</label>
+                                </div>
+                                <div class="form-row-fields">
+                                    <div class="form-detail-first col-lg-7 col-md-6 px-0">
+                                        <input type="text" class="form-inputs-child"
+                                            placeholder="Search by Name/Phone *" required="">
+
+                                        <input type="text" class="form-inputs-child "
+                                            placeholder="Billing Name (Optional) " id="billing-name"
+                                            style="display:none;" required>
+
+                                        <input type="text" class="form-inputs-child " placeholder="Phone No.">
+
+                                        <textarea type="text" class="form-inputs-child invoice-form billing-address"
+                                            placeholder="Billing Address" id="billing-address"
+                                            style="display: none;"></textarea>
+                                    </div>
+                                    <div class="col-lg-5 px-0 left-inputs">
+                                        <div class="d-flex flex-column">
+                                            <div>
+                                                <p>Ref-no .</p> <input type="text" class="invoice-ref-no" name="Ref No."
+                                                    id="Ref No.">
+                                            </div>
+                                            <div>
+                                                <p>Invoice Date.</p> <input type="date" class="invoice-date"
+                                                    name="Invoice Date" id="Invoice Date">
+                                            </div>
+                                            <div>
+                                                <p>State of Supply</p>
+                                            <!-- select-box -->
+                                            <div class="select-menu">
+                                                <div class="select-btn">
+                                                    <span class="sBtn-text">Select your option</span>
+                                                    <i class="fa-solid fa-chevron-down" style="font-size: 14px;"></i>
+                                                </div>
+                                                
+                                                <ul class="options">
+                                                    <li class="option">
+                                                        <span class="option-text">Andhra Pradesh</span>
+                                                    </li>
+                                                    <li class="option">
+                                                        <span class="option-text">Uttar Pradesh</span>
+                                                    </li>
+                                                    <li class="option">
+                                                        <span class="option-text">Rajasthan</span>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <!-- select-box -->
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="table-responsive invoice-table mx-0">
+                                <table class="table table-bordered table-responsive bg-white mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%;">#</th>
+                                            <th>Item</th>
+                                            <th style="width: 8%;">Qty</th> <!-- Make this column smaller -->
+                                            <th style="width: 8%;">Unit</th>
+                                            <th style="width: 15%;">
+                                                <p class="text-center">Price/Unit</p>
+                                                <hr class="my-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Without Tax </p>
+                                                    <p><i class="fa-solid fa-angle-down"></i></p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <p class="text-center">Discount</p>
+                                                <hr class="my-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p>%</p>
+                                                    <p>AMOUNT</p>
+                                                </div>
+                                            </th>
+                                            <th style="width: 15%;"> <!-- Make this column larger -->
+                                                <p class="text-center">Tax</p>
+                                                <hr class="my-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p>%</p>
+                                                    <p>AMOUNT</p>
+                                                </div>
+                                            </th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="invoice-body">
+                                        <tr>
+                                            <td>1</td>
+                                            <td><input type="text" class="form-contro form-control-xts" placeholder="_">
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts"
+                                                    placeholder="_"></td>
+                                            <td>
+                                                <select class="select-drop">
+                                                    <option>None</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                            <td>
+                                                <div class="d-flex justify-content-between tax">
+                                                    <select class="select-drop">
+                                                        <option>Select</option>
+                                                    </select>
+                                                    <p>0</p>
+                                                </div>
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><input type="text" class="form-contro form-control-xts" placeholder="_">
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts"
+                                                    placeholder="_"></td>
+                                            <td>
+                                                <select class="select-drop">
+                                                    <option>None</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                            <td>
+                                                <div class="d-flex justify-content-between tax">
+                                                    <select class="select-drop">
+                                                        <option>Select</option>
+                                                    </select>
+                                                    <p>0</p>
+                                                </div>
+                                            </td>
+                                            <td><input type="number" class="form-contro form-control-xts text-right"
+                                                    placeholder="0"></td>
+                                        </tr>
+                                        <tr class="bg-white text-right last-row">
+                                            <td></td>
+                                            <td class="col d-flex justify-content-between flex-wrap">
+                                                <button id="add-row" class="small-btn ">Add Row</button>
+                                                <p>Total</p>
+                                            </td>
+                                            <td>
+                                                <p>0</p>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <p>0</p>
+                                            </td>
+                                            <td>
+                                                <p>0</p>
+                                            </td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex justify-content-between  bottom-inputs">
+                                <div class="col-lg-3 px-0">
+                                    <textarea type="text" class="form-inputs-child input-description"
+                                        placeholder="Description"></textarea>
+                                </div>
+                                <div class="d-flex align-items-center" style="gap: 25px;">
+                                    <div><input type="checkbox" class="round-off" name="Round-off" id="Round-off">
+                                        <label class="Round-off">Round off</label> <input type="text"
+                                            name="round-off-input " class="form-inputs-child round-off-input">
+                                    </div>
+                                    <div><label for="">Total </label> <input type="text" class="total form-inputs-child"
+                                            id="total">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-file-inputs bottom-inputs">
+                                <div class="bottom-file-child">
+                                    <div class="add-image" onclick="document.getElementById('imagefile').click(); "><img
+                                            src="img/add_img.svg" alt="icon">Add Image
+                                        <input type="file" class="hidden" name="imagefile" id="imagefile">
+                                    </div>
+
+                                    <div class="add-document"
+                                        onclick="document.getElementById('imagedocument').click();">
+                                        <img src="img/document.svg" alt="icon"> Add Document
+                                        <input type="file" name="imagedocument" id="imagedocument"
+                                            style="display: none;">
+                                    </div>
+                                </div>
+                                <div class="parent-save-share-buttons">
+                                    <button class="small-btn small-outline-btn share-btn">Share <i
+                                            class="fa-solid   fa-share"></i>
+
+                                    </button>
+                                    <button class="small-btn  save-btn">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

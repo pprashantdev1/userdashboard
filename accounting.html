@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- css -->
+    <!-- js -->
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- js -->
+</head>
+
+<body>
+    <section class="main-frame">
+        <section class="sidebar">
+            <button class="cut-btn""><i class=" fa-solid fa-xmark"></i></button>
+            <div class="sidebar-content">
+                <div class="tallyflow-container">
+                    <a class="tallyflow1" href="index.html">TallyFlow.</a>
+                </div>
+                <img class="frame-child1-line" loading="lazy" alt="image" src="img/vector-7.svg">
+                <ul class="list-unstyled links-gaps">
+                    <li class="sidebar-items ">
+                        <img src="img/dashboard.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="sidebar-items active">
+                        <img src="img/accounting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="accounting.html">Accounting</a>
+                    </li>
+                    <li class="sidebar-items" id="drop">
+                        <img src="img/sales.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links ">
+                            Sales
+                            <i class="fa-solid  fa-chevron-right ml-5 rotate-ar" style="font-size: 10px;"></i>
+                        </a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item  drop-links " href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item  drop-links " href="estimate-qutations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item  drop-links " href="sales-order.html">Sales Order</a>
+                        </ul>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/gst-return.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="tax-return.html">Tax Return</a>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/document.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="document.html">Document</a>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/vector-4.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="reports.html">Reports</a>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/apply-for-lone.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="apply-for-lone.html">Apply for Loan</a>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/setting.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="setting.html">Settings</a>
+                    </li>
+                    <li class="sidebar-items ">
+                        <img src="img/demo.svg" class="sidebar-icons" alt="icon" loading="lazy">
+                        <a class="sidebar-links" href="demo.html">Demo</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <div class="main-section-21">
+            <!-- header  top-section -->
+            <header class="top-section">
+                <button class="menu"><i class=" fa-solid fa-bars"></i></button>
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="icon">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+                <div class="top-right-section">
+                    <div class="add">
+                        <button class="add-btn" onclick="location.href='sales-invoice.html'">
+                            <img src="img/plus.svg" alt="icon">
+                        </button>
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+                    </svg>
+                    <div class="tools-icon">
+                        <button class="setting-btn" onclick="location.href='setting.html'">
+                            <img src="img/setting.svg" alt="icon">
+                        </button>
+                        <button class="notification-btn" id="notificationDropdown">
+                            <img src="img/group-401.svg" alt="icon">
+                            <div class="dropdown-menu notificationDrop">
+                                <h3 class="notification-heading pl-3 pt-1">Notification</h3>
+                                <hr class="my-1" style="background-color: #979797; opacity: 0.5;">
+                                <a class="dropdown-item stx" href="setting.html">
+                                    <i class="fa fa-cog"></i>
+                                    <div>
+                                        <span>Settings</span>
+                                        <p>Update Dashboard</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <div>
+                                        <span>Event Update</span>
+                                        <p>An event date update again</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-user"></i>
+                                    <div>
+                                        <span>Profile</span>
+                                        <p>Update your profile</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item stx" href="#">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <div>
+                                        <span>Application Error</span>
+                                        <p>Check running application</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center" href="#">See all notifications</a>
+                            </div>
+                        </button>
+                    </div>
+                    <svg width="4" height="32" viewBox="0 0 0 0 0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V33" stroke="#636567" stroke-width="1.2"></path>
+                    </svg>
+                    <div class="profile-section" id="profileDrop">
+                        <div class="profile-name" >
+                            <p>jenny</p>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 14px;"></i>
+                        </div>
+                        <div class="profile">
+                            <img src="img/profile.jpg" alt="profile_image">
+                        </div>
+                        <div class="dropdown-menu profiledropdown" style="display: none;">
+                            <a class="dropdown-item xts" href="setting.html"><i class="fas fa-user-cog mr-2 "></i>Manage
+                                Account</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-key mr-2 "></i>Change
+                                Password</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-list mr-2 "></i>Activity
+                                Log</a>
+                            <hr class="my-0">
+                            <a class="dropdown-item xts" href="#"><i class="fas fa-sign-out-alt  mr-2"></i> Log
+                                out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header  top-section -->
+
+            <!-- image frame -->
+            <div class="submit-section" id="submit-section" style="display: non;">
+                <div class="image-frame-section">
+                    <img src="img/upload_document.png" class="img-fluid" alt="upload_document">
+                    <div class="image-child-frame-section">
+                        <h3 class="title-lg">Submit your Document </h3>
+                        <p class="para-lg">"Please upload your invoice, bill, bank statement, or any other relevant
+                            document."
+                        </p>
+                        <button class="large-btn" id="submit-btn">Upload your Document</button>
+                    </div>
+                </div>
+            </div>
+            <!-- image frame -->
+
+            <div class="middle-frame-section accounting-middle">
+                <!-- accounting section-content -->
+                <div class="upload-section" id="upload-section" style="display:none;">
+                    <div class="document-section">
+                        <div class="flex-frame-child">
+                            <div>
+                                <h3 class="title-md  text-justify">Submit your Document</h3>
+                                <p class="para-md  text-justify">Please upload your invoice, bill, bank statement, or any
+                                    other
+                                    relevant document.
+                                </p>
+                            </div>
+                            <button class="small-back-btn button-1" id="back-btn"><i class="fa-solid fa-arrow-left">
+                                </i>
+                                Back
+                            </button>
+                        </div>
+                        <hr style="width: full;background-color: #CECECE;">
+                        <!-- filter -->
+                        <form action="" method="post">
+                            <div class="d-flex justify-content-between align-items-center " style="gap:10px;">
+                                <div class="col-lg-9 col-md-8 col-sm-8 px-0">
+                                    <input type="text" name="search" class="Search" placeholder="Search">
+                                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px"
+                                        alt="icon">
+                                </div>
+                                <button class="btn-filter" id="filter">
+                                    <span><img src="img/icons.svg" alt="icon"></span> filter
+                                </button>
+                            </div>
+                        </form>
+                        <!-- filter -->
+                        <br>
+                        <div class="file-upload-wrappper-box">
+                            <!-- file -upload drag and drop -->
+                            <div class="file-upload-wrapper">
+                                <div class="file-upload-icon ">
+                                    <img src="img/brose_files.png" alt="icons">
+                                </div>
+                                <p class="file-upload-title">Drag your file(s) to start uploading</p>
+                                <p class="file-upload-text">Only support .jpg, .png, .pdf, .svg and zip files
+                                </p>
+                                <div class="file-upload-divider"> -------------- OR -------------- </div>
+                                <form action="" enctype="multipart/form-data">
+                                    <input type="file" id="fileInput" name="files" class="d-none" draggable="true">
+                                    <button type="button" class="browse-files-btn" id="browse-files-btn">Browse
+                                        files</button>
+                                </form>
+                            </div>
+                            <!-- file -upload drag and drop -->
+                            <!-- uploaded file data -->
+                            <div class="upload-data" id="upload-data" style="display: none;">
+                                <div class="data-header">
+                                    <h2 class="subtitle-lg">Document Details</h2>
+                                    <button class="btn-close" id="close-upload-data">
+                                        <p>&times;</p>
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="uploada-data-details">
+                                    <div class="file-flex">
+                                        <div>
+                                            <p id="file-name">TallyFlow.pdf</p>
+                                            <p id="file-size" class="mt-2">1.8 MB</p>
+                                        </div>
+                                        <div class="file-w-h">
+                                            <img src="img/pdf.svg" class="mx-auto d-block" alt="icons">
+                                        </div>
+                                        <h4 class="text-center pdf-file-name mt-2">TallyFlow.pdf</h4>
+                                    </div>
+                                    <div class="divider-sm">
+                                        <svg width="2" height="auto" viewBox="0 0 2 auto" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 320L1.00001 9.53674e-06" stroke="#CECECE" />
+                                        </svg>
+                                    </div>
+                                    <div class="file-data-flex">
+                                        <div class="flex-child-data">
+                                            <h2 class="data-heding-1">Document Details:</h2>
+                                            <div class="file-align-frame">
+                                                <div class="d-flex ">
+                                                    <p class="para-details">File Name</p>
+                                                    <p class="para-details"> :</p>
+                                                    <p id="file-name-detail" class="para-details">TallyFlow.pdf</p>
+                                                </div>
+                                                <div>
+                                                    <p class="para-details">Uploaded By</p>
+                                                    <p class="para-details"> :</p>
+                                                    <p id="uploaded-by" class="para-details"> User 1</p>
+                                                </div>
+                                                <div>
+                                                    <p class="para-details">Uploaded On</p>
+                                                    <p class="para-details"> :</p>
+                                                    <p id="uploaded-on" class="para-details"> 20/05/2024</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <button class="large-btn second-upload-btn" id="second-upload-btn"> Upload
+                                            Document</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- uploaded file data -->
+                            <!-- upload-file process -->
+                            <div class="upload-document" id="upload-document" style="display: none;">
+                                <div class="data-header">
+                                    <h2 class="subtitle-lg">Document Details</h2>
+                                    <button class="btn-close" id="close-upload-data">
+                                        <p>&times;</p>
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="upload-doc-parent mx-0">
+                                    <div class="upload-doc-child-first">
+                                        <div>
+                                            <p id="file-name"> TallyFlow.pdf</p>
+                                            <p id="file-size" class="mt-2"> 1.8 MB</p>
+                                        </div>
+                                        <div class="file-w-h">
+                                            <img src="img/pdf.svg" class="mx-auto d-block" alt="icons">
+                                        </div>
+                                        <h4 class="text-center pdf-file-name mt-2">TallyFlow.pdf</h4>
+                                    </div>
+                                    <hr>
+                                    <div class="upload-doc-child-second">
+                                        <div class="upload-progress" id="file-upload-progress">
+                                            <div class="d-flex align-items-start" style="gap: 10px;">
+                                                <img src="img/load_file.svg" alt="icons">
+                                                <div>
+                                                    <p class="file-progree-name">Tally Flow File .pdf</p>
+                                                    <p class="file-progree-size my-1">1.8 MB</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress file-progress-bar"
+                                                    style="background-color: #CECECE99;">
+                                                    <div class="progress-bar blue" id="custom-progress-bar"
+                                                        role="progressbar" style="width: 10%;" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                                <p id="custom-progress-text" class="ml-2"> 0%</p>
+                                            </div>
+                                        </div>
+                                        <!-- success file upload -->
+                                        <div class="success-message" id="success-message" style="display: none;">
+                                            <div class="d-flex justify-content-center align-items-center" style="gap: 10px;">
+                                                <img src="img/success.svg" class="img-fluid" alt="icons">
+                                                <div>
+                                                    <h5 class="text-justify">your file is uploaded successfully</h5>
+                                                    <p class="text-justify ">your file is uploaded successfully,Now you
+                                                        click to verify
+                                                        button
+                                                        to verify your uploaded document
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- success file upload -->
+                                        <button class="large-btn verify-btn" id="verify-btn">Verify Document</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- upload-file process -->
+
+                            <!-- scan and verify -->
+                            <div id="verify-document" class="verify-document" style="display: none;">
+                                <div class="data-header">
+                                    <h2 class="subtitle-lg">Document Details</h2>
+                                    <button class="btn-close" id="close-upload-data">
+                                        <p>&times;</p>
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="verify-docs-parent">
+                                    <div class="verify-docs-child">
+                                        <p id="file-name">TallyFlow.pdf</p>
+                                        <p id="file-size" class="mt-2">1.8 MB</p>
+                                    </div>
+                                    <div class="scansystemparent">
+                                        <div class="scan-system-main">
+                                            <div class="scan-object">
+                                                <img src="img/invoice.svg" alt="scan_pdf">
+                                                <div class="scan-overlay" style="display: none;">
+                                                    <img src="img/success.svg" alt="success">
+                                                    <p>Your File is Safe!</p>
+                                                </div>
+                                            </div>
+                                            <p class="scanning">Scanning...</p>
+                                        </div>
+                                        <button class="finul-submit-document large-btn"
+                                            id="finul-submit-document">Submit Document</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- scan and verify  -->
+                            <!-- finul success -->
+                            <div class="final-success" id="finul-success" style="display: none;">
+                                <img src="img/successgif.gif" class="img-fluid" alt="success-print">
+                                <h2>Your Document Uploaded Successfully!</h2>
+                                <button class="large-btn go-to-home">Back to main page....</button>
+                            </div>
+                            <!-- finul success -->
+                        </div>
+                    </div>
+                    <div class="container-fluid  mt-3">
+                        <div class="uploaded-files">
+                            <div class="row  align-items-center">
+                                <!-- table component -->
+                                <div class="col-md-12 tables-head-system ">
+                                    <p class="head">Document Name</p>
+                                    <p class="head">Document Type</p>
+                                    <p class="head">Document Date</p>
+                                    <p class="head">Status</p>
+                                    <p class="head">Quick Actions</p>
+                                </div>
+                                <!-- table component -->
+                                <!-- render tables -->
+                                <div class="col-md-12 tables-system">
+                                    <p><input type="checkbox" class="form-controle mr-2"
+                                            id="check-files">PR_Sales_06072024</p>
+                                    <p>.Pdf</p>
+                                    <p>06/07/2024, 02:45</p>
+                                    <p><span class="status-completed">Completed</span></p>
+                                    <p class="quick-actions">
+                                        <i class="fa fa-pencil-alt mx-1"></i>
+                                        <i class="fa fa-print mx-1 "></i>
+                                        <i class="fa fa-trash mx-1 "></i>
+                                    </p>
+                                </div>
+                                <!-- render tables -->
+                                <!-- render tables -->
+                                <div class="col-md-12 tables-system ">
+                                    <p><input type="checkbox" class="form-controle mr-2"
+                                            id="check-files">PR_Sales_06072024</p>
+                                    <p>.Pdf</p>
+                                    <p>06/07/2024, 02:45</p>
+                                    <p><span class="status-completed">Completed</span></p>
+                                    <p class="quick-actions">
+                                        <i class="fa fa-pencil-alt mx-1"></i>
+                                        <i class="fa fa-print mx-1 "></i>
+                                        <i class="fa fa-trash mx-1 "></i>
+                                    </p>
+                                </div>
+                                <!-- render tables -->
+                                <!-- render tables -->
+                                <div class="col-md-12 tables-system ">
+                                    <p><input type="checkbox" class="form-controle mr-2"
+                                            id="check-files">PR_Sales_06072024</p>
+                                    <p>.Pdf</p>
+                                    <p>06/07/2024, 02:45</p>
+                                    <p><span class="status-completed">Completed</span></p>
+                                    <p class="quick-actions">
+                                        <i class="fa fa-pencil-alt mx-1"></i>
+                                        <i class="fa fa-print mx-1"></i>
+                                        <i class="fa fa-trash mx-1"></i>
+                                    </p>
+                                </div>
+                                <!-- render tables -->
+                                <!-- render tables -->
+                                <div class="col-md-12 tables-system ">
+                                    <p><input type="checkbox" class="form-controle mr-2"
+                                            id="check-files">PR_Sales_06072024</p>
+                                    <p>.Pdf</p>
+                                    <p>06/07/2024, 02:45</p>
+                                    <p><span class="status-completed">Completed</span></p>
+                                    <p class="quick-actions">
+                                        <i class="fa fa-pencil-alt mx-1"></i>
+                                        <i class="fa fa-print mx-1 "></i>
+                                        <i class="fa fa-trash mx-1 "></i>
+                                    </p>
+                                </div>
+                                <!-- render tables -->
+                                <!-- render tables -->
+                                <div class="col-md-12 tables-system ">
+                                    <p><input type="checkbox" class="form-controle mr-2"
+                                            id="check-files">PR_Sales_06072024</p>
+                                    <p>.Pdf</p>
+                                    <p>06/07/2024, 02:45</p>
+                                    <p><span class="status-completed">Completed</span></p>
+                                    <p class="quick-actions">
+                                        <i class="fa fa-pencil-alt mx-1"></i>
+                                        <i class="fa fa-print mx-1 "></i>
+                                        <i class="fa fa-trash mx-1 "></i>
+                                    </p>
+                                </div>
+                                <!-- render tables -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- accounting section-content -->
+            </div>
+    </section>
+</body>
+
+</html>
